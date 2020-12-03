@@ -3,7 +3,7 @@
 //medicine to be purchased Function
  int PurchaseMedicine(int number)
  {
-  return 1;
+  
   int id,check,i,quantity,flag=0;
   char name[100];
   printf("Purchase Medicine\n");
@@ -99,6 +99,7 @@
     printf("Entered Name Not Found\n");
    }
   }
+  return 1;
  }
 
  //information about medicine function
