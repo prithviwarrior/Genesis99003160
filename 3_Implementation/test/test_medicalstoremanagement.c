@@ -24,8 +24,13 @@ int main() {
 /* Note: Do not edit END */
 
 /* Add your test functions in this format for testing*/
-  CU_add_test(suite, "patientanalysis", test_do_patientanalysis);
-
+  CU_add_test(suite, "MEDICALSTOREMANAGEMENTSYSTEM", test_PurchaseMedicine);
+  CU_add_test(suite, "MEDICALSTOREMANAGEMENTSYSTEM", test_EnterInfoAboutMedicine);
+  CU_add_test(suite, "MEDICALSTOREMANAGEMENTSYSTEM", test_KnowInfoAboutMedicine);
+  CU_add_test(suite, "MEDICALSTOREMANAGEMENTSYSTEM", test_StockOfMedicine);
+  CU_add_test(suite, "MEDICALSTOREMANAGEMENTSYSTEM", test_AddMedicineinStore);
+  CU_add_test(suite, "MEDICALSTOREMANAGEMENTSYSTEM", test_DeleteMedicineinStore);
+  CU_add_test(suite, "MEDICALSTOREMANAGEMENTSYSTEM", test_ChangeMedicineDetails);
 
 
 /* Note: Do not edit START*/
@@ -42,7 +47,14 @@ int main() {
 }
 /* Write all the test functions */
 void test_do_patientanalysis(void) {
-  CU_ASSERT_EQUAL(1,patientanalysis("fever"));
+  CU_ASSERT_EQUAL(1,PurchaseMedicine(9));
+  CU_ASSERT_EQUAL(2,EnterInfoAboutMedicine(9));
+  CU_ASSERT_EQUAL(3,KnowInfoAboutMedicine(9));
+  CU_ASSERT_EQUAL(4,StockOfMedicine(9));
+  CU_ASSERT_EQUAL(5,AddMedicineinStore(9));
+  CU_ASSERT_EQUAL(6,DeleteMedicineinStore(9));
+  CU_ASSERT_EQUAL(7,ChangeMedicineDetails(9));
+  
 
   /* Dummy fail*/
 }
