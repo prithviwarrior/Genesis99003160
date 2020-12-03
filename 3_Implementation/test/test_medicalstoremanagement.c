@@ -24,13 +24,13 @@ int main() {
 /* Note: Do not edit END */
 
 /* Add your test functions in this format for testing*/
-  CU_add_test(suite, "MEDICALSTOREMANAGEMENTSYSTEM", test_PurchaseMedicine);
-  CU_add_test(suite, "MEDICALSTOREMANAGEMENTSYSTEM", test_EnterInfoAboutMedicine);
-  CU_add_test(suite, "MEDICALSTOREMANAGEMENTSYSTEM", test_KnowInfoAboutMedicine);
-  CU_add_test(suite, "MEDICALSTOREMANAGEMENTSYSTEM", test_StockOfMedicine);
-  CU_add_test(suite, "MEDICALSTOREMANAGEMENTSYSTEM", test_AddMedicineinStore);
-  CU_add_test(suite, "MEDICALSTOREMANAGEMENTSYSTEM", test_DeleteMedicineinStore);
-  CU_add_test(suite, "MEDICALSTOREMANAGEMENTSYSTEM", test_ChangeMedicineDetails);
+  CU_add_test(suite, "PurchaseMedicine", test_PurchaseMedicine);
+  CU_add_test(suite, "EnterInfoAoutMedicine", test_EnterInfoAboutMedicine);
+  CU_add_test(suite, "KnowInfoAboutMedicine", test_KnowInfoAboutMedicine);
+  CU_add_test(suite, "StockOfMedicine", test_StockOfMedicine);
+  CU_add_test(suite, "AddMedicineinStore", test_AddMedicineinStore);
+  CU_add_test(suite, "DeleteMedicineinStore", test_DeleteMedicineinStore);
+  CU_add_test(suite, "ChangeMedicineDetails", test_ChangeMedicineDetails);
 
 
 /* Note: Do not edit START*/
