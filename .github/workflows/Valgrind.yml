@@ -17,7 +17,4 @@ jobs:
       run: |
         sudo apt-get -y install valgrind
         sudo apt-get -y install install libcunit1 libcunit1-doc libcunit1-dev
-    - name: make test
-      run: |
-        make test 
-        valgrind ./3_Implementation/build/Test_MEDICALSTOREMANAGEMENTSYSTEM.out
+   
