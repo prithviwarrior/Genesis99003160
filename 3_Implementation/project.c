@@ -12,7 +12,7 @@
 
  //main function
 
-int test_main();
+//int test_main();
  int main(void)
  {
    int i,j,choice, number=0,c;;
@@ -109,8 +109,8 @@ int test_main();
    strcpy(m[9].Company,"Abott");
    strcpy(m[9].info,"Good Medicine for all types of infections");
    }
-   test_main();
-   return 0;
+   //test_main();
+  // return 0;
   do{
 
   printf("Enter\n1 - Purchase Medicine\n2 - Enter Information about a Medicine\n3 - Stock of Medicine in Store\n4 - Medicine Information\n5 - Add Medicine\n6 - Delete a Medicine\n7 - Change Quantity of Medicine\n");
