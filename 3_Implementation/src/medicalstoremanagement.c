@@ -99,6 +99,7 @@
     printf("Entered Name Not Found\n");
    }
   }
+  return 1;
  }
 
  //information about medicine function
@@ -142,6 +143,7 @@
   {
    printf("Entered Name Not Found\n");
   }
+  return 2;
  }
 
  // function for knowing the information of a  particular medicine
@@ -173,6 +175,7 @@
   {
    printf("Entered Name Not Found\n");
   }
+  return 3;
  }
 
  //stock of the medicine function
@@ -202,6 +205,7 @@
   else{
    printf("No Items or Medicines Available\n");
   }
+  return 4;
  }
 
  // function for adding a new medicine
@@ -233,6 +237,7 @@
   scanf("%d",&(m[number].price));
   strcpy(m[number].info,"");
   printf("Medicine with id %d Added Successfully\n",m[number].id);
+  return 5;
  }
 
  //function for deleting a medicine from store
@@ -264,6 +269,7 @@ int DeleteMedicineStore(int number)
   {
    printf("Medicine with %d is Deleted Successfully\n",id);
   }
+ return 6;
  }
 
  //function for changing any details of medicine
@@ -355,4 +361,5 @@ int DeleteMedicineStore(int number)
     break;
    }
   }
+  return 7;
  }
