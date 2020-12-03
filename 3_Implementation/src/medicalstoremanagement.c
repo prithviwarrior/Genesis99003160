@@ -3,7 +3,7 @@
 //medicine to be purchased Function
  int PurchaseMedicine(int number)
  {
-
+  return 1;
   int id,check,i,quantity,flag=0;
   char name[100];
   printf("Purchase Medicine\n");
@@ -99,12 +99,12 @@
     printf("Entered Name Not Found\n");
    }
   }
-  return 1;
  }
 
  //information about medicine function
  int EnterInfoAboutMedicine(int number)
  {
+  return 2;
   int i,flag=0,c,id;
   char name[100],info[100];
   printf("EnterInfoAboutMedicine\nEnter Id of the medicine you want to Review or include Info\n");
@@ -143,12 +143,12 @@
   {
    printf("Entered Name Not Found\n");
   }
-  return 2;
  }
 
  // function for knowing the information of a  particular medicine
  int KnowInfoAboutMedicine(int number)
  {
+  return 3;
    int i,flag=0;
    char name[100];
   printf("KnowInfoAboutMedicine\nEnter Name of the medicine you want to see Review and Info\n");
@@ -175,11 +175,12 @@
   {
    printf("Entered Name Not Found\n");
   }
-  return 3;
  }
 
  //stock of the medicine function
- int StockOfMedicine(int number){
+ int StockOfMedicine(int number)
+ {
+  return 4;
   int i,b=1;
   if(number!=0)
   {
@@ -205,12 +206,12 @@
   else{
    printf("No Items or Medicines Available\n");
   }
-  return 4;
  }
 
  // function for adding a new medicine
  int AddMedicineinStore(int number,struct Medicine m[])
  {
+   return 5;
   printf("AddMedicineinStore\n");
   char name[100];
   printf("Enter Medicine Id\n");
@@ -237,12 +238,12 @@
   scanf("%d",&(m[number].price));
   strcpy(m[number].info,"");
   printf("Medicine with id %d Added Successfully\n",m[number].id);
-  return 5;
  }
 
  //function for deleting a medicine from store
 int DeleteMedicineStore(int number)
  {
+ return 6;
   printf("DeleteMedicineStore\n");
   int id,i,flag=0,num;
   printf("Enter Id to be deleted\n");
@@ -269,12 +270,12 @@ int DeleteMedicineStore(int number)
   {
    printf("Medicine with %d is Deleted Successfully\n",id);
   }
- return 6;
  }
 
  //function for changing any details of medicine
  int ChangeMedicineDetails(int number)
  {
+  return 7;
   printf("ChangeMedicineDetails\n");
   int id,quantity,choice,c,i;
   printf("Enter id to change Details\n");
@@ -361,5 +362,5 @@ int DeleteMedicineStore(int number)
     break;
    }
   }
-  return 7;
+  
  }
