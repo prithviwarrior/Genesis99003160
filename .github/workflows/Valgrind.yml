@@ -20,4 +20,4 @@ jobs:
     - name: make test
       run: |
         make test
-        valgrind .3_Implementation/build/Test_medicalstoremanagementsystem.out
+        valgrind ./3_Implementation/build/Test_medicalstoremanagementsystem.out
