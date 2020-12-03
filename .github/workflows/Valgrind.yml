@@ -15,9 +15,9 @@ jobs:
     - uses: actions/checkout@v2
     - name: apt install dependency
       run: |
-        sudo apt-get install valgrind
-        sudo apt-get install unity
+        sudo apt-get -y install valgrind
+        sudo apt-get -y install install libcunit1 libcunit1-doc libcunit1-dev
     - name: make test
       run: |
-        make test -C 3_Implementation
+        make test 
         valgrind ./3_Implementation/build/Test_MEDICALSTOREMANAGEMENTSYSTEM.out
