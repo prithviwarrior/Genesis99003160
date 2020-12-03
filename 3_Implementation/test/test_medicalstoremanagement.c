@@ -1,59 +1,50 @@
-#include "unity.h"
-#include "medicalstoremanagement.h"
-/* Required by the unity test framework */
-void setUp(){}
-/* Required by the unity test framework */
-void tearDown(){}
+#include <CUnit/Basic.h>
+#include <CUnit/CUnit.h>
+
+#include <medicalstoremanagement.h>
+#define PROJECT_NAME "MEDICALSTOREMANAGEMENTSYSTEM"
+
+/* Prototypes for all the test functions */
+void test_PurchaseMedicine(void);
+void test_EnterInfoAboutMedicine(void);
+void test_KnowInfoAboutMedicine(void);
+void test_StockOfMedicine(void);
+void test_AddMedicineinStore(void);
+void test_DeleteMedicineinStore(void);
+void test_ChangeMedicineDetails(void);
 
 
-void test_PurchaseMedicine(void)
-{
-    TEST_ASSERT(PurchaseMedicine(9));
+/* Start of the application test */
+int main() {
+/* Note: Do not edit START*/
+  /*Initialize and setup the Test Framework */
+  if (CUE_SUCCESS != CU_initialize_registry())
+    return CU_get_error();
+  CU_pSuite suite = CU_add_suite(PROJECT_NAME, 0, 0);
+/* Note: Do not edit END */
+
+/* Add your test functions in this format for testing*/
+  CU_add_test(suite, "patientanalysis", test_do_patientanalysis);
+
+
+
+/* Note: Do not edit START*/
+  /* Setup Test Framework to output the result to Screen */
+  CU_basic_set_mode(CU_BRM_VERBOSE);
+
+  /* run the unit test framework*/
+  CU_basic_run_tests();
+
+  /* Cleaning the Resources used by Unit test framework */
+  CU_cleanup_registry();
+/* Note: Do not edit END */
+  return 0;
 }
+/* Write all the test functions */
+void test_do_patientanalysis(void) {
+  CU_ASSERT_EQUAL(1,patientanalysis("fever"));
 
-void test_EnterInfoAboutMedicine(void)
-{
-    TEST_ASSERT(EnterInfoAboutMedicine(9));
-}
-void test_KnowInfoAboutMedicine(void)
-{
-    TEST_ASSERT(KnowInfoAboutMedicine(9));
-}
-void test_StockOfMedicine(void)
-{
-    TEST_ASSERT(StockOfMedicine(9));
-}
-void test_AddMedicineinStore(void)
-{
-    TEST_ASSERT(AddMedicineinStore(9,m));
-}
-void test_DeleteMedicineStore(void)
-{
-    TEST_ASSERT(DeleteMedicineStore(9));
-}
-void test_ChangeMedicineDetails(void)
-{
-    TEST_ASSERT(ChangeMedicineDetails(9));
-}
-
-int  test_main(void)
-{
-/* Initiate the Unity Test Framework */
-  UNITY_BEGIN();
-
-/* Run Test functions */
-
-  RUN_TEST(test_PurchaseMedicine);
-  RUN_TEST(test_EnterInfoAboutMedicine);
-  RUN_TEST(test_KnowInfoAboutMedicine);
-  RUN_TEST(test_StockOfMedicine);
-  RUN_TEST(test_AddMedicineinStore);
-  RUN_TEST(test_DeleteMedicineStore);
-  RUN_TEST(test_ChangeMedicineDetails);
-
-
-  /* Close the Unity Test Framework */
-  return UNITY_END();
+  /* Dummy fail*/
 }
 
 
